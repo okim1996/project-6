@@ -129,6 +129,12 @@ button:hover {
   font-size: var(--font-size-medium);
 }
 
+.btn__reset:hover {
+  background: purple;  
+  transition: .3s;
+  transform: scale(1.2);   
+}
+
 /* Overlay */
 
 #overlay {

@@ -50,7 +50,7 @@ function getRandomPhraseAsArray (phraseArr) {
         if (chosenPhrase.charAt(i) !== " ") {
             characterArray.push(chosenPhrase.charAt(i));
         } else {
-            characterArray.push('*');
+            characterArray.push('---');
         }                                       
     }
     return characterArray;
@@ -58,12 +58,12 @@ function getRandomPhraseAsArray (phraseArr) {
 
 function addPhraseToDisplay(charArr) {    
     let li;
-    for (let i = 0 ; i < charArr.length ; i++){        
+    for (let i = 0 ; i < charArr.length ; i++){     
+
         li = document.createElement('li');
         li.textContent = charArr[i];
-        li.className = 'letter';
-        if (charArr[i] === '*'){
-            li.className += ' show chosen';
+        if(charArr[i] !== '---' ) {
+            li.className = 'letter';
         }
         phrase.appendChild(li);     
     }
